@@ -1,0 +1,36 @@
+@mixin theme-blue($type, $border-color, $bg-color){
+	border:2px $type $border-color;
+	border-radius: 5px;
+	background-color: $bg-color;
+}
+
+@mixin theme-red($type, $border-color, $bg-color){
+	border:1px $type $border-color;
+	border-radius: 2px;
+	background-color: $bg-color;
+}
+
+@mixin theme-white($type, $border-color, $bg-color){
+	border:5px $type $border-color;
+	border-radius: 1px;
+	background-color: $bg-color;
+}
+
+
+
+
+
+@mixin linx ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}

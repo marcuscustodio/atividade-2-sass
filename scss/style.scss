@@ -1,0 +1,66 @@
+@import "variaveis.scss";
+@import "mixin.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+%espacamento{
+	margin:10px;
+	padding:20px;
+}
+%font{
+	text-transform: uppercase;
+	font-size: $f-size;
+	color: $blue;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+	@include theme-blue(dotted, #000, #fff);
+}
+
+.navbar-brand{
+	display: inline-block;
+	width: 200px;
+	@extend %espacamento;
+	a{
+		@extend %font;
+	}
+}
+.navbar-right{
+		display: inline-block;
+		@extend %espacamento;
+		@include linx ($link, $visit, $hover, $active);
+	li{
+		display: inline;
+		@extend %espacamento;
+	}
+	a {
+    	color: $link;
+    	@extend %font;
+    	&:visited {
+      	color: $visit;
+    	}
+    		&:hover {
+     		color: $hover;
+     		background: $active;
+     		padding: 10px;
+	     		&.color-two:hover{
+	     			background: $link;
+	     			color: $white;
+	     		}
+	     		&.color-tree:hover{
+	     			background: $hover;
+	     			color: $white;
+	     		}
+    		}
+    			&:active {
+     	 		color: $active;
+    		}
+  		}
+	
+}
